@@ -8,23 +8,34 @@ namespace Apply_For_Generic
 {
     internal class Helper
     {
-        public static void Swap(ref int x,ref int y)
+        #region Generic Swap
+        public static void Swap<T>(ref T x, ref T y)
         {
-            int temp = x;
+            T temp = x;
             x = y;
-            y=temp;
+            y = temp;
         }
-        public static void Swap(ref double x,ref double y)
-        {
-            double temp = x;
-            x = y;
-            y=temp;
-        }
-        public static void Swap(ref Point x,ref Point y)
-        {
-            Point temp = x;
-            x = y;
-            y=temp;
-        }
+        #endregion
+
+        #region Non Generic Swap
+        //public static void Swap(ref object x,ref object y)
+        //{
+        //    object temp = x;
+        //    x = y;
+        //    y=temp;
+        //}
+        //public static void Swap(ref double x,ref double y)
+        //{
+        //    double temp = x;
+        //    x = y;
+        //    y=temp;
+        //}
+        //public static void Swap(ref Point x,ref Point y)
+        //{
+        //    Point temp = x;
+        //    x = y;
+        //    y=temp;
+        //} 
+        #endregion
     }
 }
