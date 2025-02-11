@@ -8,6 +8,7 @@ namespace Apply_For_Generic
 {
     internal class Helper<T>
     {
+        #region Swap
         #region Generic Swap
         //public static void Swap<T>(ref T x, ref T y)
         //{
@@ -53,5 +54,6 @@ namespace Apply_For_Generic
         //    y=temp;
         //} 
         #endregion
-    }
+    } 
+    #endregion
 }
