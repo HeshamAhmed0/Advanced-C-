@@ -6,14 +6,30 @@ using System.Threading.Tasks;
 
 namespace Apply_For_Generic
 {
-    internal class Helper
+    internal class Helper<T>
     {
         #region Generic Swap
-        public static void Swap<T>(ref T x, ref T y)
+        //public static void Swap<T>(ref T x, ref T y)
+        //{
+        //    T temp = x;
+        //    x = y;
+        //    y = temp;
+        //}
+
+        public static int SearchArray(int[] numbers, int value)
         {
-            T temp = x;
-            x = y;
-            y = temp;
+            if (numbers is not null)
+            {
+                foreach (int i in numbers)
+                {
+                    if (i == value)
+                    {
+                        return i;
+                    }
+                }
+            }
+            return -1;
+
         }
         #endregion
 
