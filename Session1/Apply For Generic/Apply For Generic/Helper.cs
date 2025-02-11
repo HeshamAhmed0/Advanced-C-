@@ -16,21 +16,21 @@ namespace Apply_For_Generic
         //    y = temp;
         //}
 
-        public static int SearchArray(int[] numbers, int value)
-        {
-            if (numbers is not null)
-            {
-                foreach (int i in numbers)
-                {
-                    if (i == value)
-                    {
-                        return i;
-                    }
-                }
-            }
-            return -1;
+        //public static int SearchArray(T[] numbers, int value)
+        //{
+        //    if (numbers is not null)
+        //    {
+        //        foreach (T i in numbers)
+        //        {
+        //            if (i == value)
+        //            {
+        //                return i;
+        //            }
+        //        }
+        //    }
+        //    return -1;
 
-        }
+        //}
         #endregion
 
         #region Non Generic Swap
