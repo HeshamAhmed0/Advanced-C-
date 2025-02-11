@@ -45,6 +45,10 @@
             //Console.WriteLine(P1);
             //Console.WriteLine(P2);
             #endregion
+
+            int[] numbers = { 1,2,3,4,5};
+            int Position = Helper<char>.SearchArray(numbers,2);
+            Console.WriteLine(Position);
         }
     }
 }
