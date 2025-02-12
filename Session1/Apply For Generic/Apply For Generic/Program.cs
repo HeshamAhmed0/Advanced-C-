@@ -46,9 +46,21 @@
             //Console.WriteLine(P2);
             #endregion
 
-            int[] numbers = { 1,2,3,4,5};
-            int Position = Helper<char>.SearchArray(numbers,2);
-            Console.WriteLine(Position);
+            //int[] numbers = { 1,2,3,4,5};
+            //int Position = Helper<char>.SearchArray(numbers,2);
+            //Console.WriteLine(Position);
+
+            Employee Emp01 = new Employee(10,"Hesham",2000);
+            Employee Emp02 = new Employee(10,"Hesham",2000);
+            //Employee Emp02 = new Employee(20,"Ahmed",5000);
+            if (Emp01==Emp02)
+            {
+                Console.WriteLine("Equal");
+            }
+            else
+            {
+                Console.WriteLine("Not Equal");
+            }
         }
     }
 }
