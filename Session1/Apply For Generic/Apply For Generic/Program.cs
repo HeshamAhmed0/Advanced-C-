@@ -63,8 +63,8 @@
             //}
 
 
-            Employee Emp01 = new Employee(10, "Hesham", 2000);
-            Employee Emp02 = new Employee(10, "Hesham", 100);
+            Employee Emp01 = new Employee(2000, "Hesham", 10);
+            Employee Emp02 = new Employee(10, "Hesham", 2000);
 
             Console.WriteLine(Emp01.Equals(Emp02));
 

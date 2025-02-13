@@ -37,7 +37,8 @@ namespace Apply_For_Generic
 
         public override int GetHashCode()
         {
-            return this.Id.GetHashCode() +( this.Name?.GetHashCode()??0) + this.Salary.GetHashCode();
+            //return this.Id.GetHashCode() +( this.Name?.GetHashCode()??0) + this.Salary.GetHashCode();
+            return HashCode.Combine(Id, Name, Salary);
         }
 
 
