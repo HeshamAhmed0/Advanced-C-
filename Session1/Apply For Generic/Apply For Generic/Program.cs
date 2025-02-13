@@ -50,17 +50,24 @@
             //int Position = Helper<char>.SearchArray(numbers,2);
             //Console.WriteLine(Position);
 
-            Employee Emp01 = new Employee(10,"Hesham",2000);
-            Employee Emp02 = new Employee(10,"Hesham",2000);
+            //Employee Emp01 = new Employee(10,"Hesham",2000);
+            //Employee Emp02 = new Employee(10,"Hesham",2000);
             //Employee Emp02 = new Employee(20,"Ahmed",5000);
-            if (Emp01==Emp02)
-            {
-                Console.WriteLine("Equal");
-            }
-            else
-            {
-                Console.WriteLine("Not Equal");
-            }
+            //if (Emp01==Emp02)
+            //{
+            //    Console.WriteLine("Equal");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not Equal");
+            //}
+
+
+            Employee Emp01 = new Employee(10, "Hesham", 2000);
+            Employee Emp02 = new Employee(10, "Hesham", 100);
+
+            Console.WriteLine(Emp01.Equals(Emp02));
+
         }
     }
 }

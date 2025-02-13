@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Apply_For_Generic
 {
-    internal struct Employee
+    internal class Employee
     {
         public Employee(int id, string? name, decimal salary)
         {
@@ -20,13 +20,37 @@ namespace Apply_For_Generic
 
         public decimal Salary { get; set; }
 
-        public static bool operator ==(Employee left, Employee right)
+
+        public override bool Equals(object? obj)
         {
-            return left.Id==right.Id && left.Name ==right.Name &&left.Salary==right.Salary;
+            Employee? employee = (Employee?)obj ;
+            if(employee is not null)
+            {
+                return this.Name==employee.Name && this.Salary==employee.Salary && this.Id==employee.Id;
+            }
+            else
+            {
+                return false;
+            }
         }
-        public static bool operator !=(Employee left, Employee right)
+
+
+        public override int GetHashCode()
         {
-            return left.Id != right.Id || left.Name != right.Name || left.Salary != right.Salary;
+            return this.Id.GetHashCode() +( this.Name?.GetHashCode()??0) + this.Salary.GetHashCode();
         }
+
+
+
+
+
+        //public static bool operator ==(Employee left, Employee right)
+        //{
+        //    return left.Id==right.Id && left.Name ==right.Name &&left.Salary==right.Salary;
+        //}
+        //public static bool operator !=(Employee left, Employee right)
+        //{
+        //    return left.Id != right.Id || left.Name != right.Name || left.Salary != right.Salary;
+        //}
     }
 }
