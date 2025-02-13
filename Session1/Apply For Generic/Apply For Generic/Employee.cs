@@ -33,9 +33,22 @@ namespace Apply_For_Generic
             //    return false;
             //}
 
-            if (obj is Employee employee)
+            // is Operator
+
+            //if (obj is Employee employee)
+            //{
+            //    return this.Id==employee.Id && this.Name == employee.Name &&this.Salary==employee.Salary;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+            //  AS Operator
+            Employee? employee = obj as Employee;
+            if (employee is not null)
             {
-                return this.Id==employee.Id && this.Name == employee.Name &&this.Salary==employee.Salary;
+                return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
             }
             else
             {
