@@ -23,10 +23,19 @@ namespace Apply_For_Generic
 
         public override bool Equals(object? obj)
         {
-            Employee? employee = (Employee?)obj ;
-            if(employee is not null)
+            //Employee? employee = (Employee?)obj ;
+            //if(employee is not null)
+            //{
+            //    return this.Name==employee.Name && this.Salary==employee.Salary && this.Id==employee.Id;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+            if (obj is Employee employee)
             {
-                return this.Name==employee.Name && this.Salary==employee.Salary && this.Id==employee.Id;
+                return this.Id==employee.Id && this.Name == employee.Name &&this.Salary==employee.Salary;
             }
             else
             {
