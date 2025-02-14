@@ -20,17 +20,17 @@ namespace Apply_For_Generic
 
         public decimal Salary { get; set; }
 
-        //public bool Equals(Employee? employee)
-        //{
-        //    if (employee is not null)
-        //    {
-        //        return this.Name == employee.Name && this.Salary == employee.Salary && this.Id == employee.Id;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+        public bool Equals(Employee? employee)
+        {
+            if (employee is not null)
+            {
+                return this.Name == employee.Name && this.Salary == employee.Salary && this.Id == employee.Id;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         //public bool Equals(Employee employee)
         //{
@@ -40,26 +40,26 @@ namespace Apply_For_Generic
 
         //public override bool Equals(object? obj)
         //{
-        //    //Employee? employee = (Employee?)obj ;
-        //    //if(employee is not null)
-        //    //{
-        //    //    return this.Name==employee.Name && this.Salary==employee.Salary && this.Id==employee.Id;
-        //    //}
-        //    //else
-        //    //{
-        //    //    return false;
-        //    //}
+        //    Employee? employee = (Employee?)obj;
+        //    if (employee is not null)
+        //    {
+        //        return this.Name == employee.Name && this.Salary == employee.Salary && this.Id == employee.Id;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
 
-        //    // is Operator
+        //     is Operator
 
-        //    //if (obj is Employee employee)
-        //    //{
-        //    //    return this.Id==employee.Id && this.Name == employee.Name &&this.Salary==employee.Salary;
-        //    //}
-        //    //else
-        //    //{
-        //    //    return false;
-        //    //}
+        //    if (obj is Employee employee)
+        //    {
+        //        return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
 
         //    //  AS Operator
         //    Employee? employee = obj as Employee;
@@ -74,11 +74,11 @@ namespace Apply_For_Generic
         //}
 
 
-        //public override int GetHashCode()
-        //{
-        //    //return this.Id.GetHashCode() +( this.Name?.GetHashCode()??0) + this.Salary.GetHashCode();
-        //    return HashCode.Combine(Id, Name, Salary);
-        //}
+        public override int GetHashCode()
+        {
+            //return this.Id.GetHashCode() +( this.Name?.GetHashCode()??0) + this.Salary.GetHashCode();
+            return HashCode.Combine(Id, Name, Salary);
+        }
 
 
 
