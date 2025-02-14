@@ -65,8 +65,19 @@
 
             Employee Emp01 = new Employee(2000, "Hesham", 10);
             Employee Emp02 = new Employee(10, "Hesham", 2000);
+            Employee[] Employees =
+            {
+
+            new Employee (10,"Hesham",5000),
+            new Employee (30,"Hesham",4000),
+            new Employee (40,"Hesham",3000),
+            new Employee (50,"Hesham",5500),
+
+            };
 
             Console.WriteLine(Emp01.Equals(Emp02));
+            int result=Helper<Employee>.LinearSearch(Employees,Emp01);
+            Console.WriteLine(result);
 
         }
     }

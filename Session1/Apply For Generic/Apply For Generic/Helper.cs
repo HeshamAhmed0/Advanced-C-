@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Apply_For_Generic
 {
-    internal class Helper<T>
+    internal static class Helper<T> where T : IEquatable<T>
     {
         #region Swap
         #region Generic Swap
@@ -54,6 +54,25 @@ namespace Apply_For_Generic
         //    y=temp;
         //} 
         #endregion
-    } 
+    
     #endregion
+
+    public static int LinearSearch(T[] Arr, T value)
+        {
+            if (Arr?.Length > 0 && value is not null)
+            {
+                for (int i = 0; i < Arr.Length; i++)
+                {
+                    if (value.Equals(Arr[i]))
+                    {
+                        return i;
+                    }
+                }
+
+
+            }
+            return -1;
+        }
+    }
 }
+

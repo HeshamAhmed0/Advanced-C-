@@ -32,6 +32,11 @@ namespace Apply_For_Generic
             }
         }
 
+        //public bool Equals(Employee employee)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
 
         //public override bool Equals(object? obj)
         //{
