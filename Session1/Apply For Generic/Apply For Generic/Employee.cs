@@ -20,17 +20,17 @@ namespace Apply_For_Generic
 
         public decimal Salary { get; set; }
 
-        public bool Equals(Employee? employee)
-        {
-            if (employee is not null)
-            {
-                return this.Name == employee.Name && this.Salary == employee.Salary && this.Id == employee.Id;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //public bool Equals(Employee? employee)
+        //{
+        //    if (employee is not null)
+        //    {
+        //        return this.Name == employee.Name && this.Salary == employee.Salary && this.Id == employee.Id;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
 
         //public bool Equals(Employee employee)
         //{
