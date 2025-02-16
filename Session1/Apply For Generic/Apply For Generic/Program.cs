@@ -76,7 +76,8 @@
             };
 
             Console.WriteLine(Emp01.Equals(Emp02));
-            int result=Helper<Employee>.LinearSearch(Employees,Emp01);
+            int result = Helper<Employee>.LinearSearch(Employees, Emp01, new EmployeeIdIEqutableComparer());
+            
             Console.WriteLine(result);
 
         }
