@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,46 +33,48 @@ namespace Apply_For_Generic
             }
         }
 
+
+
         //public bool Equals(Employee employee)
         //{
         //    throw new NotImplementedException();
         //}
 
 
-        //public override bool Equals(object? obj)
-        //{
-        //    Employee? employee = (Employee?)obj;
-        //    if (employee is not null)
-        //    {
-        //        return this.Name == employee.Name && this.Salary == employee.Salary && this.Id == employee.Id;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
+        public override bool Equals(object? obj)
+        {
+            Employee? employee = (Employee?)obj;
+            if (employee is not null)
+            {
+                return this.Name == employee.Name && this.Salary == employee.Salary && this.Id == employee.Id;
+            }
+            else
+            {
+                return false;
+            }
 
-        //     is Operator
+            //     is Operator
 
-        //    if (obj is Employee employee)
-        //    {
-        //        return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
+            //if (obj is Employee employee)
+            //{
+            //    return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
 
-        //    //  AS Operator
-        //    Employee? employee = obj as Employee;
-        //    if (employee is not null)
-        //    {
-        //        return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+            ////  AS Operator
+            //Employee? employee = obj as Employee;
+            //if (employee is not null)
+            //{
+            //    return this.Id == employee.Id && this.Name == employee.Name && this.Salary == employee.Salary;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+        }
 
 
         public override int GetHashCode()
@@ -80,6 +83,7 @@ namespace Apply_For_Generic
             return HashCode.Combine(Id, Name, Salary);
         }
 
+        
 
 
 
