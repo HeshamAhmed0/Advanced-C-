@@ -63,22 +63,27 @@
             //}
 
 
-            Employee Emp01 = new Employee(2000, "Hesham", 10);
-            Employee Emp02 = new Employee(10, "Hesham", 2000);
-            Employee[] Employees =
-            {
+            //Employee Emp01 = new Employee(2000, "Hesham", 10);
+            //Employee Emp02 = new Employee(10, "Hesham", 2000);
+            //Employee[] Employees =
+            //{
 
-            new Employee (10,"Hesham",5000),
-            new Employee (30,"Hesham",4000),
-            new Employee (40,"Hesham",3000),
-            new Employee (50,"Hesham",5500),
+            //new Employee (10,"Hesham",5000),
+            //new Employee (30,"Hesham",4000),
+            //new Employee (40,"Hesham",3000),
+            //new Employee (50,"Hesham",5500),
 
-            };
+            //};
 
-            Console.WriteLine(Emp01.Equals(Emp02));
-            int result = Helper<Employee>.LinearSearch(Employees, Emp01, new EmployeeIdIEqutableComparer());
+            //Console.WriteLine(Emp01.Equals(Emp02));
+            //int result = Helper<Employee>.LinearSearch(Employees, Emp01, new EmployeeIdIEqutableComparer());
             
-            Console.WriteLine(result);
+            //Console.WriteLine(result);
+
+
+            int[] Numbers = { 10, 20, 50, 40, 50 };
+            Helper<int>.BubbleSort(Numbers);
+            foreach (int number in Numbers) { Console.WriteLine(number); }
 
         }
     }

@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Apply_For_Generic
 {
-    internal static class Helper<T> where T : IEqualityComparer<T>
+    internal static class Helper<T> where T : IEquatable<T>
     {
         #region Swap
         #region Generic Swap
-        //public static void Swap<T>(ref T x, ref T y)
-        //{
-        //    T temp = x;
-        //    x = y;
-        //    y = temp;
-        //}
+        public static void Swap<T>(ref T x, ref T y)
+        {
+            T temp = x;
+            x = y;
+            y = temp;
+        }
 
         //public static int SearchArray(T[] numbers, int value)
         //{
@@ -35,11 +35,11 @@ namespace Apply_For_Generic
         #endregion
 
         #region Non Generic Swap
-        //public static void Swap(ref object x,ref object y)
+        //public static void Swap(ref object x, ref object y)
         //{
         //    object temp = x;
         //    x = y;
-        //    y=temp;
+        //    y = temp;
         //}
         //public static void Swap(ref double x,ref double y)
         //{
@@ -54,10 +54,10 @@ namespace Apply_For_Generic
         //    y=temp;
         //} 
         #endregion
-    
-    #endregion
 
-    public static int LinearSearch(T[] Arr, T value)
+        #endregion
+
+        public static int LinearSearch(T[] Arr, T value)
         {
             if (Arr?.Length > 0 && value is not null)
             {
@@ -89,6 +89,20 @@ namespace Apply_For_Generic
 
             }
             return -1;
+        }
+
+        public static void BubbleSort(int[] Arr)
+        {
+            for(int i = 0;i < Arr.Length; i++)
+            {
+                for(int j=0; j < Arr.Length - 1 - i; j++)
+                {
+                    if (Arr[j] > Arr[j + 1])
+                    {
+                        Helper<int>.Swap(ref Arr[j], ref Arr[j + 1]);
+                    }
+                }
+            }
         }
     }
 }
