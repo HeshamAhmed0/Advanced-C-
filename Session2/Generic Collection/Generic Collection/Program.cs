@@ -109,29 +109,45 @@ namespace Generic_Collection
             #endregion
 
             #region LinkedList
-            LinkedList<int> l = new LinkedList<int>();  
-            l.AddFirst(1);
-            l.AddFirst(2);
-            l.AddFirst(3);
+            //LinkedList<int> l = new LinkedList<int>();  
+            //l.AddFirst(1);
+            //l.AddFirst(2);
+            //l.AddFirst(3);
+            ////foreach (int i in l)
+            ////{
+            ////    Console.WriteLine(i);
+            ////}
+            //LinkedListNode<int> linkedListNode = new LinkedListNode<int>(10);
+            //LinkedListNode<int> linkedListNode2 = new LinkedListNode<int>(10);
+            //l.AddLast(linkedListNode);
+
+            //l.AddAfter(linkedListNode, linkedListNode2);
+            //l.AddBefore(linkedListNode, 20);
+            //l.AddBefore(linkedListNode, 50);
+            //Console.WriteLine(linkedListNode.Value);
+            //Console.WriteLine(linkedListNode.Next);
+            //Console.WriteLine(linkedListNode.Previous);
+            //Console.WriteLine(linkedListNode.ValueRef);
             //foreach (int i in l)
             //{
             //    Console.WriteLine(i);
             //}
-            LinkedListNode<int> linkedListNode = new LinkedListNode<int>(10);
-            LinkedListNode<int> linkedListNode2 = new LinkedListNode<int>(10);
-            l.AddLast(linkedListNode);
+            #endregion
 
-            l.AddAfter(linkedListNode, linkedListNode2);
-            l.AddBefore(linkedListNode, 20);
-            l.AddBefore(linkedListNode, 50);
-            Console.WriteLine(linkedListNode.Value);
-            Console.WriteLine(linkedListNode.Next);
-            Console.WriteLine(linkedListNode.Previous);
-            Console.WriteLine(linkedListNode.ValueRef);
-            foreach (int i in l)
-            {
-                Console.WriteLine(i);
-            }
+            #region Stack
+            //Stack<int> stack= new Stack<int>(); // capacity and count = 0
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //stack.Push(4);
+            //Console.WriteLine($"{stack.Capacity},{stack.Count}"); // capacity and count = 4
+            //stack.Push(20);
+            //Console.WriteLine($"{stack.Capacity},{stack.Count}"); // capacity =8  and count = 5
+
+            #endregion
+
+            #region Queue
+
             #endregion
 
             #endregion
