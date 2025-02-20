@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.ObjectModel;
 
 namespace Generic_Collection
 {
@@ -59,7 +60,7 @@ namespace Generic_Collection
             #region Generic Collection List<T>
             List<int> list = new List<int>();
             Console.WriteLine($"({list.Capacity} , {list.Count})");  // 0 , 0
-            list.Add( 1 );
+            list.Add(1);
             Console.WriteLine($"({list.Capacity} , {list.Count})"); // 4 , 1
             list.AddRange(2, 3, 4);
             Console.WriteLine($"({list.Capacity} , {list.Count})"); // 4, 4
@@ -80,6 +81,30 @@ namespace Generic_Collection
             //list.RemoveRange(0, 10); // in this case will remove from index 0  10 items
             #endregion
 
+            #region AsReadOnly
+            //ReadOnlyCollection<int> read=list.AsReadOnly();
+            //Console.WriteLine(read);
+            #endregion
+
+            #region BinarySearch
+            //int Index=list.BinarySearch(10);
+            //Console.WriteLine(Index);
+
+            #endregion
+
+            #region Clear()
+            //list.Clear();   // in this case the list will be deleted
+            #endregion
+
+            #region Remove()
+            //list.Remove(0);  // in this case the value 0 wil be deleted
+            //list.RemoveAt(0);  // in this case value in index 0 will bedeleted
+            //list.RemoveRange(0, 10); //in this case will start from index 0  and delete 10 items
+            #endregion
+
+            #region Index
+            int index=list.IndexOf(10);
+            #endregion
 
             #endregion
         }
