@@ -58,14 +58,16 @@ namespace Generic_Collection
             #endregion
 
             #region Generic Collection List<T>
-            List<int> list = new List<int>();
-            Console.WriteLine($"({list.Capacity} , {list.Count})");  // 0 , 0
-            list.Add(1);
-            Console.WriteLine($"({list.Capacity} , {list.Count})"); // 4 , 1
-            list.AddRange(2, 3, 4);
-            Console.WriteLine($"({list.Capacity} , {list.Count})"); // 4, 4
-            list.Add(10);
-            Console.WriteLine($"({list.Capacity} , {list.Count})"); // 8 ,5
+            #region List
+            ////List<int> list = new List<int>();
+            ////Console.WriteLine($"({list.Capacity} , {list.Count})");  // 0 , 0
+            ////list.Add(1);
+            ////Console.WriteLine($"({list.Capacity} , {list.Count})"); // 4 , 1
+            ////list.AddRange(2, 3, 4);
+            ////Console.WriteLine($"({list.Capacity} , {list.Count})"); // 4, 4
+            ////list.Add(10);
+            ////Console.WriteLine($"({list.Capacity} , {list.Count})"); // 8 ,5 
+            #endregion
 
             #region Insert
             //list.Insert(1, 10);
@@ -103,7 +105,33 @@ namespace Generic_Collection
             #endregion
 
             #region Index
-            int index=list.IndexOf(10);
+            //int index=list.IndexOf(10);
+            #endregion
+
+            #region LinkedList
+            LinkedList<int> l = new LinkedList<int>();  
+            l.AddFirst(1);
+            l.AddFirst(2);
+            l.AddFirst(3);
+            //foreach (int i in l)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            LinkedListNode<int> linkedListNode = new LinkedListNode<int>(10);
+            LinkedListNode<int> linkedListNode2 = new LinkedListNode<int>(10);
+            l.AddLast(linkedListNode);
+
+            l.AddAfter(linkedListNode, linkedListNode2);
+            l.AddBefore(linkedListNode, 20);
+            l.AddBefore(linkedListNode, 50);
+            Console.WriteLine(linkedListNode.Value);
+            Console.WriteLine(linkedListNode.Next);
+            Console.WriteLine(linkedListNode.Previous);
+            Console.WriteLine(linkedListNode.ValueRef);
+            foreach (int i in l)
+            {
+                Console.WriteLine(i);
+            }
             #endregion
 
             #endregion
