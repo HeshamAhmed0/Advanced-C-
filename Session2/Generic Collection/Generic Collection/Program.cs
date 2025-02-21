@@ -116,10 +116,10 @@ namespace Generic_Collection
             ////foreach (int i in l)
             ////{
             ////    Console.WriteLine(i);
-            ////}
-            //LinkedListNode<int> linkedListNode = new LinkedListNode<int>(10);
-            //LinkedListNode<int> linkedListNode2 = new LinkedListNode<int>(10);
-            //l.AddLast(linkedListNode);
+            //}
+            LinkedListNode<int> linkedListNode = new LinkedListNode<int>(10);
+            LinkedListNode<int> linkedListNode2 = new LinkedListNode<int>(10);
+            l.AddLast(linkedListNode);
 
             //l.AddAfter(linkedListNode, linkedListNode2);
             //l.AddBefore(linkedListNode, 20);
