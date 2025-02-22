@@ -70,11 +70,11 @@ namespace Generic_Collection
             #endregion
 
             #region Insert
-            //list.Insert(1, 10);
-            //foreach( int i in list)
-            //{
-            //    Console.Write($"{i} ");
-            //}
+            list.Insert(1, 10);
+            foreach (int i in list)
+            {
+                Console.Write($"{i} ");
+            }
             #endregion
 
             #region Remove
