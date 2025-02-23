@@ -7,7 +7,7 @@
         {
 
 
-            #region Deegete
+            #region Example01
             //{
             //    CountFunc countFunc;
             //    countFunc = new CountFunc(StringFunctions.CountUpper);
@@ -15,7 +15,7 @@
             //    Console.WriteLine(Result); 
             #endregion
 
-            #region Sorting Algorithm
+            #region Example02
             //int[] Arr = { 5, 2, 3 ,6,8,9,2,4};
             //SortingAlgorithms<int>.BubbleSort(Arr,SortingTypes.COMPARELESS);
             //foreach (int i in Arr)
@@ -24,7 +24,7 @@
             //}
 
             string[] names = { "Hesham", "Ahmed", "Ali","Hassan", "Ali" };
-            SortingAlgorithms<String>.BubbleSort(names, SortingTypes.CompareStringsDesci);
+            SortingAlgorithms<string>.BubbleSort(names, SortingTypes.CompareStringsAsci);
             foreach (string name in names)
             {
                 Console.WriteLine(name);

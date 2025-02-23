@@ -10,10 +10,10 @@ namespace Apply_For_Delegete
     //public delegate bool DelegeteFunc(int A, int B);
 
     // Generic Delegete
-    public delegate bool DelegeteFunc<T>(T A, T B);
+    public delegate Tout DelegeteFunc<in T1,in T2,out Tout>(  T1 A,  T2 B);
     internal class SortingAlgorithms<T>
     {
-        public static void BubbleSort(T[] Arr,DelegeteFunc<T> delegeteFunc)
+        public static void BubbleSort(T[] Arr, DelegeteFunc<T, T, bool> delegeteFunc)
         {
             if (Arr is not null && delegeteFunc is not null)
             {
