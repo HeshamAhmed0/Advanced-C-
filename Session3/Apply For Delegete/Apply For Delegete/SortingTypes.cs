@@ -16,6 +16,15 @@ namespace Apply_For_Delegete
         {
             return A < b;
         }
+        public static bool CompareStringsAsci(string A, string B) 
+        {
+        return A?.Length > B?.Length;
+        }
+        public static bool CompareStringsDesci(string A, string B) 
+        {
+        return A?.Length < B?.Length;
+        }
+
     }
 
 }

@@ -16,11 +16,18 @@
             #endregion
 
             #region Sorting Algorithm
-            int[] Arr = { 5, 2, 3 ,6,8,9,2,4};
-            SortingAlgorithms.BubbleSort(Arr,SortingTypes.COMPARELESS);
-            foreach (int i in Arr)
+            //int[] Arr = { 5, 2, 3 ,6,8,9,2,4};
+            //SortingAlgorithms<int>.BubbleSort(Arr,SortingTypes.COMPARELESS);
+            //foreach (int i in Arr)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            string[] names = { "Hesham", "Ahmed", "Ali","Hassan", "Ali" };
+            SortingAlgorithms<String>.BubbleSort(names, SortingTypes.CompareStringsDesci);
+            foreach (string name in names)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(name);
             }
             #endregion
         }

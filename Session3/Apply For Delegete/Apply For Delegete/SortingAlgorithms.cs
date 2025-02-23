@@ -6,26 +6,33 @@ using System.Threading.Tasks;
 
 namespace Apply_For_Delegete
 {
-    public delegate bool DelegeteFunc(int A, int B);
-    internal class SortingAlgorithms
+    // Non  Generic Delegete
+    //public delegate bool DelegeteFunc(int A, int B);
+
+    // Generic Delegete
+    public delegate bool DelegeteFunc<T>(T A, T B);
+    internal class SortingAlgorithms<T>
     {
-        public static void BubbleSort(int[] Arr,DelegeteFunc delegeteFunc)
+        public static void BubbleSort(T[] Arr,DelegeteFunc<T> delegeteFunc)
         {
-            for (int i = 0; i < Arr.Length; i++) 
+            if (Arr is not null && delegeteFunc is not null)
             {
-                for (int j=0; j<Arr.Length-j-1;j++)
+                for (int i = 0; i < Arr.Length; i++)
                 {
-                    if (delegeteFunc.Invoke(Arr[j], Arr[j+1]))
+                    for (int j = 0; j < Arr.Length - j - 1; j++)
                     {
-                        Swap(ref Arr[j],ref Arr[j+1]);
+                        if (delegeteFunc.Invoke(Arr[j], Arr[j + 1]))
+                        {
+                            Swap(ref Arr[j], ref Arr[j + 1]);
+                        }
                     }
                 }
             }
         }
 
-        private static void Swap(ref int v1, ref int v2)
+        private static void Swap(ref T v1, ref T v2)
         {
-            int temp = v1;
+            T temp = v1;
             v1 = v2;
             v2 = temp;
         }
