@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Apply_For_Delegete
 {
+    
     internal static class StringFunctions
     {
         public static int CountUpper(string input)
