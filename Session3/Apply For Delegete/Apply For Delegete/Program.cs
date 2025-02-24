@@ -1,4 +1,6 @@
-﻿namespace Apply_For_Delegete
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace Apply_For_Delegete
 {
     public delegate int CountFunc(string input);
     internal class Program
@@ -66,28 +68,34 @@
             #endregion
 
             #region Anonymous Method
-            //Action in this delegete there are two version 1 > Generic
-            //   2 > Non Generic
-            // Generic Take From 0 To 16 Parameter And Return Void
-            // Non Generic Return Void And No Parameter
-             Action action =delegate { Console.WriteLine("Hello World"); };
-            action();
-            action.Invoke();
+            //            //Action in this delegete there are two version 1 > Generic
+            //            //   2 > Non Generic
+            //            // Generic Take From 0 To 16 Parameter And Return Void
+            //            // Non Generic Return Void And No Parameter
+            //             Action action =delegate { Console.WriteLine("Hello World"); };
+            //            action();
+            //            action.Invoke();
 
 
-            // Func This Delegete Take From User From 0 To 16 input and return and data type
-            Func<int, string> func = TestBuiltinDelegete.ConvertIntToString;
+            //            // Func This Delegete Take From User From 0 To 16 input and return and data type
+            //            Func<int, string> func = TestBuiltinDelegete.ConvertIntToString;
+            //            string Result = func(10);
+            //            Console.WriteLine(Result);
+
+
+            //            // Predict this Take one Parameter And return Bool
+            //            Predicate<int> predicate =   delegate(int number) { return number > 0; }
+            //;
+            //        bool result = predicate(-10);
+            //            Console.WriteLine(result);
+            #endregion
+
+            #region Lamda Expresion
+            Func<int, string> func = number =>  number.ToString();
             string Result = func(10);
             Console.WriteLine(Result);
 
-
-            // Predict this Take one Parameter And return Bool
-            Predicate<int> predicate =   delegate(int number) { return number > 0; }
-;
-        bool result = predicate(-10);
-            Console.WriteLine(result);
             #endregion
-
 
         }
     }
