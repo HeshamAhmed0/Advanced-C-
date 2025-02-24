@@ -45,25 +45,50 @@
 
             #region Built In Delegete
             //Action in this delegete there are two version 1 > Generic
-                                                       //   2 > Non Generic
+            //   2 > Non Generic
             // Generic Take From 0 To 16 Parameter And Return Void 
             // Non Generic Return Void And No Parameter
-            Action action=TestBuiltinDelegete.Hello;
+            // Action action=TestBuiltinDelegete.Hello;
+            // action();
+            // action.Invoke();
+
+
+            // // Func This Delegete Take From User From 0 To 16 input and return and data type
+            // Func<int,string>  func=TestBuiltinDelegete.ConvertIntToString;
+            //string Result =func(10);
+            // Console.WriteLine(Result);
+
+
+            // // Predict this Take one Parameter And return Bool
+            // Predicate<int> predicate =TestBuiltinDelegete.CheckForPositiveNum;
+            // bool result=predicate(-10);
+            // Console.WriteLine(result);
+            #endregion
+
+            #region Anonymous Method
+            //Action in this delegete there are two version 1 > Generic
+            //   2 > Non Generic
+            // Generic Take From 0 To 16 Parameter And Return Void
+            // Non Generic Return Void And No Parameter
+             Action action =delegate { Console.WriteLine("Hello World"); };
             action();
             action.Invoke();
 
 
             // Func This Delegete Take From User From 0 To 16 input and return and data type
-            Func<int,string>  func=TestBuiltinDelegete.ConvertIntToString;
-           string Result =func(10);
+            Func<int, string> func = TestBuiltinDelegete.ConvertIntToString;
+            string Result = func(10);
             Console.WriteLine(Result);
 
 
             // Predict this Take one Parameter And return Bool
-            Predicate<int> predicate =TestBuiltinDelegete.CheckForPositiveNum;
-            bool result=predicate(-10);
+            Predicate<int> predicate =   delegate(int number) { return number > 0; }
+;
+        bool result = predicate(-10);
             Console.WriteLine(result);
             #endregion
+
+
         }
     }
 }
