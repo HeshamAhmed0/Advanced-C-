@@ -11,10 +11,10 @@ namespace Apply_For_Delegete
 
             #region Example01
             {
-                //CountFunc countFunc;
-                //countFunc = new CountFunc(StringFunctions.CountUpper);
-                //int Result = countFunc("HESHAM");
-                //Console.WriteLine(Result);
+                CountFunc countFunc;
+                countFunc = new CountFunc(StringFunctions.CountUpper);
+                int Result = countFunc("HESHAM");
+                Console.WriteLine(Result);
                 #endregion
 
                 #region Example02
