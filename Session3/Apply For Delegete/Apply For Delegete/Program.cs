@@ -34,15 +34,15 @@ namespace Apply_For_Delegete
                 #endregion
 
                 #region Example03
-                // List<int> numbers=Enumerable.Range(0,100).ToList();
-                //List<int> list= FilterList.FindOddNumbers(numbers, FliterationOfType.SortEven);
+                List<int> numbers = Enumerable.Range(0, 100).ToList();
+                List<int> list = FilterList.FindOddNumbers(numbers, FliterationOfType.SortEven);
 
 
-                // //List<int> Result= FilterList.FindOddNumbers(numbers);
-                // foreach (int i in list)
-                // {
-                //     Console.Write($"{i} ");
-                // }
+                //List<int> Result= FilterList.FindOddNumbers(numbers);
+                foreach (int i in list)
+                {
+                    Console.Write($"{i} ");
+                }
                 #endregion
 
                 #region Built In Delegete
