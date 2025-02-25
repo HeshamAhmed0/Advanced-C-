@@ -18,12 +18,12 @@ namespace Apply_For_Delegete
                 #endregion
 
                 #region Example02
-                int[] Arr = { 5, 2, 3, 6, 8, 9, 2, 4 };
-                SortingAlgorithms<int>.BubbleSort(Arr, SortingTypes.COMPARELESS);
-                foreach (int i in Arr)
-                {
-                    Console.WriteLine(i);
-                }
+                //int[] Arr = { 5, 2, 3, 6, 8, 9, 2, 4 };
+                //SortingAlgorithms<int>.BubbleSort(Arr, SortingTypes.COMPARELESS);
+                //foreach (int i in Arr)
+                //{
+                //    Console.WriteLine(i);
+                //}
 
                 //string[] names = { "Hesham", "Ahmed", "Ali","Hassan", "Ali" };
                 //SortingAlgorithms<string>.BubbleSort(names, SortingTypes.CompareStringsAsci);
