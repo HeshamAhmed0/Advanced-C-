@@ -5,7 +5,7 @@ namespace Apply_For_Delegete
     public delegate int CountFunc(string input);
     internal class Program
     {
-        static void Main(string[] args) 
+        static void Main(string[] args)
         {
 
 
@@ -97,8 +97,28 @@ namespace Apply_For_Delegete
 
                 #endregion
 
+                #region Dictionary
+                Dictionary<string, int> dic = new Dictionary<string, int>()
+                {
+                    { "Hesham", 111},
+                    { "Ahmed", 222},
+                    { "Mohamed", 111},
+
+                };
+
+                //foreach (var item in dic)
+                //{
+                //    Console.WriteLine(item);
+                //}
+                foreach (KeyValuePair<string,int> item in dic)
+                {
+                    Console.WriteLine(item.Value);
+                    Console.WriteLine(item.Key);
+                }
+                #endregion
 
 
             }
         }
+    }
 }
