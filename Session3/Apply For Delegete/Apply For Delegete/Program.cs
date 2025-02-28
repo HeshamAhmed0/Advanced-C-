@@ -99,10 +99,10 @@ namespace Apply_For_Delegete
 
                 #region Dictionary
                 Dictionary<string, int> dic = new Dictionary<string, int>()
-                {
-                    { "Hesham", 111},
-                    { "Ahmed", 222},
-                    { "Mohamed", 111},
+                //{
+                //    { "Hesham", 111},
+                //    { "Ahmed", 222},
+                //    { "Mohamed", 111},
 
                 };
 
